@@ -9,6 +9,9 @@ connect()
 app.use(cors())
 app.use(express.json())
 
+app.get('/', (req, res) => {
+    res.send("Hello World!")
+})
 app.use('/api/student', require('./routes/stud'))
 
 app.listen(port, (req, res) => {
